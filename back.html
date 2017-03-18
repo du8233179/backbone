@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/underscore.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/backbone.js"></script>
+</head>
+<body>
+	<button>点击</button>
+	<ul>
+		<li>111111</li>
+		<li>111111</li>
+		<li>111111</li>
+		<li>111111</li>
+		<li>111111</li>
+		<li>111111</li>
+	</ul>
+	<script>
+		/*var M = Backbone.Model.extend({
+			defaults:{ name:'adu'}
+		});
+		var V = Backbone.View.extend({
+			initialize:function(){
+				this.listenTo(this.model,'change',this.show)
+			},
+			show:function(model){
+				$('body').append('<h1>'+model.get("name")+'</h1>')
+			}
+		})
+		var m = new M;
+		var v = new V({model:m});
+		m.set('name','hi')*/
+	/*	Backbone.sync = function(method,model){
+			model.id = 1
+		}
+		var M = Backbone.Model.extend({
+			defaults:{name:"adu"},
+			url:"/user"
+		})
+		var m = new M;
+		m.save();
+		m.save({name:'li'});*/
+		/*var route = Backbone.Router.extend({
+			routes:{
+				'help': 'help',
+				'search/query': 'search',
+				'search/:query/p:page': 'search',
+			},
+			help:function(){
+				alert(1);
+			},
+			search:function(query,page){
+				alert(2);
+			}
+
+		})
+		var R = new route;
+		Backbone.history.start();*/
+		var V = Backbone.View.extend({
+			el:$('body'),
+			events:{
+				"click button" : 'aaaa',
+				'mouseover li' : 'bbbb',
+				'mouseout li' : 'cccc'
+			},
+			aaaa:function(){
+				alert(1)
+			},
+			bbbb:function(){
+				alert(2)
+			},
+			cccc:function(){
+				alert(3)
+			}
+		})
+		var v = new V;
+	</script>
+</body>
+</html>
